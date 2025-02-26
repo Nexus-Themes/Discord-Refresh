@@ -1,29 +1,10 @@
 {
-    "name": "discord-refresh-theme",
-    "author": "Riddim_GLiTCH",
-    "version": "1.0.0",
-    "description": "An enhanced experience of the Modern Discord Layout.",
-    "repository": "github:Riddim-GLiTCH/Discord Refresh",
-    "type": "module",
-    "private": true,
-    "engines": {
-        "node": ">=20.0.0",
-        "pnpm": ">=9.0.0"
-    },
-    "scripts": {
-        "dev": "bd-scss dev",
-        "bd": "bd-scss build",
-        "rp": "replugged bundle theme",
-        "lint": "prettier ./src --check",
-        "lint:fix": "prettier ./src --write"
-    },
-    "dependencies": {
-        "@parcel/config-default": "^2.8.3",
-        "@parcel/core": "^2.8.3",
-        "@parcel/transformer-sass": "^2.8.3",
-        "@types/node": "^20.14.10",
-        "prettier": "^3.3.2",
-        "replugged": "^4.8.1",
-        "bd-scss": "^2.0.14"
-    }
+	"type": "module",
+	"scripts": {
+		"dev": "bd-scss dev",
+		"build": "bd-scss build"
+	},
+	"dependencies": {
+		"bd-scss": "^2.0.14"
+	}
 }
