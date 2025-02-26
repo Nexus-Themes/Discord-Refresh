@@ -1,12 +1,12 @@
 /**
- * @name Discord Refresh
- * @author Riddim-GLiTCH
+ * @name Discord-Refresh
+ * @author Nexus-Themes
  * @version 1.0.0
  * @description An enhanced experience of the Modern Discord Layout.
- * @source https://github.com/Riddim-GLiTCH/Discord Refresh
+ * @source https://github.com/Nexus-Themes/Discord Refresh
 */
 
-@import url('https://riddim-glitch.github.io/Discord Refresh/Discord Refresh.css');
+@import url('https://nexus-themes.github.io/Discord-Refresh/Discord-Refresh.css');
 
 @import url("https://smolalli.github.io/Themes/Snippets/removechatbuttons.css");
 /* Uncomment this import to restore the Message Input Bar to the old style if you have the new one and want to go back. */
