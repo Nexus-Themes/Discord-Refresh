@@ -12,14 +12,21 @@ jobs:
     steps:
       - name: 'Checkout Repo'
         uses: 'actions/checkout@v2'
+
       - name: 'Setup NodeJS'
         uses: 'actions/setup-node@v1'
         with:
           node-version: 16
+
       - name: 'Clean install of dependencies'
         run: 'npm ci'
+
       - name: 'Run build script'
         run: 'npm run build'
+
+      - name: 'Copy README.md from main branch'
+        run: 'git checkout main -- README.md'
+
       - name: 'Deploy'
         uses: 'peaceiris/actions-gh-pages@v3'
         with:
