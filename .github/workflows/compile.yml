@@ -24,6 +24,9 @@ jobs:
       - name: 'Run build script'
         run: 'npm run build'
 
+      - name: 'Copy README.md from main branch'
+        run: 'git checkout main -- README.md'
+
       - name: 'Deploy'
         uses: 'peaceiris/actions-gh-pages@v3'
         with:
