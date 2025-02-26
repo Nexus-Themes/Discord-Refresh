@@ -1,3 +1,3 @@
 # Discord Refresh
 
-An enhanced experience of the Modern Discord Layout
+An enhanced experience of the Modern Discord Layout.
