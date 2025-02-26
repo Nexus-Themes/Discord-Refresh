@@ -1,0 +1,24 @@
+/**
+ * @name Discord Refresh
+ * @author Riddim-GLiTCH
+ * @version 1.0.0
+ * @description An enhanced experience of the Modern Discord Layout.
+ * @source https://github.com/Riddim-GLiTCH/Discord Refresh
+*/
+
+@import url('https://riddim-glitch.github.io/Discord Refresh/Discord Refresh.css');
+
+@import url("https://smolalli.github.io/Themes/Snippets/removechatbuttons.css");
+/* Uncomment this import to restore the Message Input Bar to the old style if you have the new one and want to go back. */
+/* @import url(https://davart154.github.io/Themes/Snippets/Old%20Chat%20Bar%20Layout/OldChatBar.css);*/
+/* -= Settings =- */
+/* Remove Chat Button Settings */
+/* Uncomment the elements you want to be hidden. Comment the elements you want to be visible. */
+:root {
+  --gift: none;
+  --gif: none;
+  --sticker: none;
+  /* --emoji: none; */
+  /* --upload: none; */
+  --activity: none;
+}
