@@ -1,0 +1,43 @@
+name: Build and release asar for Replugged
+ 
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Instal PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Install Node.js dependencies
+        run: pnpm install
+
+      - name: Build TypeScript and bundle into asar
+        run: pnpm run rp
+
+      - name: Build BD .theme.css
+        run: pnpm run bd
+
+      - name: Publish release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "bundle/*, dist/*.theme.css"
+          makeLatest: true
+          generateReleaseNotes: true

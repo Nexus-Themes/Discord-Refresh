@@ -1,0 +1,20 @@
+// The CSS to be included in your .theme.css file.
+// Addon @imports should be placed here.
+
+@import url("https://smolalli.github.io/Themes/Snippets/removechatbuttons.css"); // Imports CSS to clean up the Message Input Bar
+
+/* Uncomment this import to restore the Message Input Bar to the old style if you have the new one and want to go back. */
+/* @import url(https://davart154.github.io/Themes/Snippets/Old%20Chat%20Bar%20Layout/OldChatBar.css);*/ // Reverts the Message Input Bar to the legacy styling, In Case User is on Treatment 2
+
+/* -= Settings =- */
+/* Remove Chat Button Settings */
+/* Uncomment the elements you want to be hidden. Comment the elements you want to be visible. */
+
+:root {
+  --gift: none;
+  --gif: none;
+  --sticker: none;
+  /* --emoji: none; */
+  /* --upload: none; */
+  --activity: none;
+}

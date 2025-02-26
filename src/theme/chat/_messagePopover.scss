@@ -1,0 +1,19 @@
+/* Fix Forward Icon */
+[d="M21.7 7.3a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4L18.58 9H13a7 7 0 0 0-7 7v4a1 1 0 1 1-2 0v-4a9 9 0 0 1 9-9h5.59l-3.3-3.3a1 1 0 0 1 1.42-1.4l5 5Z"] {
+  d: path(
+    "M 0,0 V 0 M13 16V5.41l3.3 3.3a1 1 0 1 0 1.4-1.42l-5-5a1 1 0 0 0-1.4 0l-5 5a1 1 0 0 0 1.4 1.42L11 5.4V16a1 1 0 1 0 2 0ZM4 15a1 1 0 0 1 1-1h2a1 1 0 1 0 0-2H5a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-4a3 3 0 0 0-3-3h-2a1 1 0 1 0 0 2h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4Z"
+  ) !important;
+}
+/* Move popover to left for messages sent by yourself */
+#app-mount
+  [class^="messageListItem__"]
+  [data-is-self="true"]
+  .buttonContainer_c19a55 {
+  position: absolute;
+  rotate: 180deg;
+  left: 20px;
+
+  .buttonsInner__5126c {
+    rotate: 180deg;
+  }
+}

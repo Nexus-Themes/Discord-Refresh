@@ -1,0 +1,18 @@
+{
+    "id": "dev.is-a.riddim-glitch.Discord-Refresh",
+    "name": "Discord Refresh",
+    "description": "An enhanced experience of the Modern Discord Layout.",
+    "author": {
+        "name": "Riddim_GLiTCH",
+        "discordID": "801089753038061669",
+        "github": "Riddim_GLiTCH"
+    },
+    "version": "1.0.0",
+    "updater": {
+        "type": "github",
+        "id": "Riddim-GLiTCH/Discord Refresh"
+    },
+    "license": "See README.md",
+    "type": "replugged-theme",
+    "main": "src/dev.scss"
+}

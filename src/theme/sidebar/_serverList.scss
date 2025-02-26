@@ -1,0 +1,71 @@
+/* Always top Home Button */
+[aria-label="Boost this server"] {
+  display: none;
+}
+
+.guilds_c48ade .unreadMentionsIndicatorTop_ef3116 {
+  top: 40px;
+}
+
+.guilds_c48ade .tree_ef3116:focus {
+  outline-color: transparent;
+}
+
+.guilds_c48ade .scroller_ef3116 {
+  contain: unset;
+  margin-top: 50px;
+}
+
+.guilds_c48ade .scroller_ef3116 .tutorialContainer__1f388 {
+  position: fixed;
+  transform: translatey(-100%);
+  padding-bottom: 10px;
+  z-index: 2;
+}
+
+.scroller_ef3116::before {
+  content: "";
+  position: fixed;
+  top: 86px;
+  width: 72px;
+  height: 20px;
+  background: linear-gradient(var(--background-tertiary), transparent 95%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Always bottom Server List Buttons */
+.scroller_ef3116,
+.itemsContainer_ef3116 {
+  contain: unset;
+  margin-bottom: 90px !important;
+  padding-bottom: 20px !important;
+}
+
+.scroller_ef3116::after {
+  content: "";
+  position: fixed;
+  bottom: calc(var(--custom-app-panels-height, 0) + -65px);
+  width: 72px;
+  height: 200px;
+  background: linear-gradient(transparent, var(--background-tertiary) 10%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tutorialContainer__650eb {
+  position: fixed;
+  bottom: calc(var(--custom-app-panels-height, 0) + 65px);
+  z-index: 2;
+}
+
+.tutorialContainer__650eb + .listItem__650eb {
+  position: fixed;
+  bottom: calc(var(--custom-app-panels-height, 0) + 15px);
+  contain: none;
+  z-index: 2;
+}
+
+.guilds_c48ade .unreadMentionsIndicatorBottom_ef3116 {
+  bottom: 90px;
+}

@@ -1,0 +1,17 @@
+/* Prettier Disabled Input Area */
+.form_f75fb0:has(.channelTextAreaDisabled__74017) {
+  border-top: 2px solid var(--app-border-frame);
+  height: 50px;
+  background-color: var(--background-primary);
+  cursor: not-allowed;
+
+  .channelTextAreaDisabled__74017.channelTextAreaDisabled__74017 {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    .rightAccessories__74017,
+    .buttons__74017 {
+      display: none;
+    }
+  }
+}

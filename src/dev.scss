@@ -1,0 +1,32 @@
+// The "dev" script will target this file.
+// Generating the full theme file.
+
+@use "./core/root";
+@use "./theme";
+
+:root {
+  --Discord-Refresh-Version: "v1.0.0-DEV" !important;
+}
+
+.app_a3002d {
+  &::before {
+    z-index: 101;
+    position: absolute;
+    text-align: center;
+    content: "Discord Refresh " var(--Discord-Refresh-Version);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 36px;
+    padding-left: 4px;
+    padding-right: 4px;
+    left: 50%;
+    transform: translate(-50%);
+    // width: 100%;
+    border-radius: 8px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-shadow: var(--elevation-low);
+    color: #fff;
+    background-color: var(--red-430);
+  }
+}
