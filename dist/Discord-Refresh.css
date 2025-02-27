@@ -46,7 +46,6 @@
 #app-mount [class^=messageListItem__] [data-is-self=true],
 #app-mount .message__5126c[data-author-self=true] {
   margin-left: auto;
-  width: 100%;
   max-width: 90%;
   padding-left: 48px;
   padding-right: 16px !important;
@@ -237,7 +236,7 @@
 
 #app-mount .contents_c19a55 .messageContent_c19a55,
 #app-mount .visualMediaItemContainer_f4758a,
-#app-mount .embed__623de {
+#app-mount {
   background-color: var(--bg-base-secondary) !important;
   border: solid 1px var(--app-border-frame) !important;
   padding: 8px;
