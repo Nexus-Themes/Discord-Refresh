@@ -1,0 +1,147 @@
+// This is me, Riddim_GLiTCH, The maker of this theme.
+$devID: "801089753038061669";
+// List of contributors to the project.
+$contribIDs: "", // This list is empty for now because no external contributions were made yet.
+"",
+""; 
+// ContribBadge
+$contribBadge: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNkZjhlMWQiIHN0cm9rZS13aWR0aD0iMC43NSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1yaWJib24iPjxwYXRoIGQ9Ik0xMiAxMS4yMkMxMSA5Ljk5NyAxMCA5IDEwIDhhMiAyIDAgMCAxIDQgMGMwIDEtLjk5OCAyLjAwMi0yLjAxIDMuMjIiLz48cGF0aCBkPSJtMTIgMTggMi41Ny0zLjUiLz48cGF0aCBkPSJNNi4yNDMgOS4wMTZhNyA3IDAgMCAxIDExLjUwNy0uMDA5Ii8+PHBhdGggZD0iTTkuMzUgMTQuNTMgMTIgMTEuMjIiLz48cGF0aCBkPSJNOS4zNSAxNC41M0M3LjcyOCAxMi4yNDYgNiAxMC4yMjEgNiA3YTYgNSAwIDAgMSAxMiAwYy0uMDA1IDMuMjItMS43NzggNS4yMzUtMy40MyA3LjVsMy41NTcgNC41MjdhMSAxIDAgMCAxLS4yMDMgMS40M2wtMS44OTQgMS4zNmExIDEgMCAwIDEtMS4zODQtLjIxNUwxMiAxOGwtMi42NzkgMy41OTNhMSAxIDAgMCAxLTEuMzkuMjEzbC0xLjg2NS0xLjM1M2ExIDEgMCAwIDEtLjIwMy0xLjQyMnoiLz48L3N2Zz4=");
+$devBadge: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmMzhiYTgiIHN0cm9rZS13aWR0aD0iMC43NSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jcm93biI+PHBhdGggZD0iTTExLjU2MiAzLjI2NmEuNS41IDAgMCAxIC44NzYgMEwxNS4zOSA4Ljg3YTEgMSAwIDAgMCAxLjUxNi4yOTRMMjEuMTgzIDUuNWEuNS41IDAgMCAxIC43OTguNTE5bC0yLjgzNCAxMC4yNDZhMSAxIDAgMCAxLS45NTYuNzM0SDUuODFhMSAxIDAgMCAxLS45NTctLjczNEwyLjAyIDYuMDJhLjUuNSAwIDAgMSAuNzk4LS41MTlsNC4yNzYgMy42NjRhMSAxIDAgMCAwIDEuNTE2LS4yOTR6Ii8+PHBhdGggZD0iTTUgMjFoMTQiLz48L3N2Zz4=");
+
+@each $uid in $contribIDs {
+    .message__5126c[data-author-id="#{$uid}"] .header_c19a55 .username_c19a55::before { // Contributor Badge in Message Headers
+        content: $contribBadge;
+        padding-right: 5px;
+    }
+    .message__5126c[data-author-id="#{$uid}"] .contents_c19a55::before {
+        content: "Refresh Tweaks Contributor";
+        position: absolute;
+        bottom: 100%; 
+        transform: translateX(-40%);
+        background: var(--background-primary);
+        color: var(--text-normal);
+        border: solid 1px var(--app-border-frame);
+        padding: 5px 8px;
+        font-size: 12px;
+        white-space: nowrap;
+        border-radius: 5px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+        pointer-events: none;
+        z-index: 20;
+    }
+    .message__5126c.hasReply_c19a55[data-author-id="#{$uid}"] .contents_c19a55::before {
+        bottom: 68%; 
+    }
+    .message__5126c[data-author-id="#{$uid}"]:has(.username_c19a55:hover) .contents_c19a55::before {
+        transition-delay: 1s;
+        opacity: 1;
+        visibility: visible;
+    }
+    .repliedMessage_c19a55:has([src*="#{$uid}"]) { // Contributor Badge in Replies (why do I have to do it this way 😭)
+        .replyAvatar_c19a55.replyAvatar_c19a55 {
+            padding-right: 0!important;
+            margin-left: 0px;
+        }
+        .username_c19a55 { 
+            padding-left: 15px;
+            &::after {
+                position: absolute;
+                content: $contribBadge;
+                left: -2px;
+            }
+        }
+    }
+    .member__5d473:has(.avatar__44b0c[src*="#{$uid}"]) { // Contributor Badge in Members List
+        .content__91a9d .nameAndDecorators__91a9d::before {
+            content: $contribBadge;
+            margin-left: -2px;
+        }
+    }
+    .layer_da8173:has([data-member-id="#{$uid}"]) .usernameRow__63ed3::before,
+    .panel_c0bea0[data-member-id="#{$uid}"] .usernameRow__63ed3::before,
+    .fullSize_c0bea0[data-member-id="#{$uid}"] .usernameRow__63ed3::before { // Contributor Badge in Profile Popouts, Full Profiles and DM side-profiles
+        content: $contribBadge;
+        margin-right: -2px;
+    }
+    .dm__972a0:has(.avatar__44b0c[src*="#{$uid}"]) .content__20a53 .nameAndDecorators__20a53::before { // Contributor Badge in DM list
+        content: $contribBadge;
+        margin-left: -2px;
+    }
+}
+  
+
+.message__5126c[data-author-id="#{$devID}"] .header_c19a55 .username_c19a55::before { // Developer Badge in Message Headers
+    content: $devBadge;
+    padding-right: 5px;
+}
+.message__5126c[data-author-id="#{$devID}"][data-is-self="true"] .header_c19a55 .username_c19a55 { // Edge Case for when you are logged into my account (so only for me lol)
+    &::before {
+        content: none;
+        padding-right: 0;
+    }
+    &::after { 
+        content: $devBadge;
+        padding-left: 5px;
+    }
+}
+.message__5126c[data-author-id="#{$devID}"] .contents_c19a55::before {
+    content: "Refresh Tweaks Author";
+    position: absolute;
+    bottom: 100%; 
+    transform: translateX(-40%);
+    background-color: color-mix(in srgb, #f38ba8 10%, var(--bg-base-tertiary));
+    border: solid 1px color-mix(in srgb, #f38ba8 50%, var(--app-border-frame));
+    color: var(--text-normal);
+    padding: 5px 8px;
+    font-size: 12px;
+    white-space: nowrap;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    z-index: 20;
+}
+.message__5126c[data-author-id="#{$devID}"][data-is-self="true"] .contents_c19a55::before { // another edge Case for when you are logged into my account (so only for me lol)
+    right: -4%;
+}
+.message__5126c.hasReply_c19a55[data-author-id="#{$devID}"] .contents_c19a55::before {
+    bottom: 68%; 
+}
+.message__5126c[data-author-id="#{$devID}"]:has(.username_c19a55:hover) .contents_c19a55::before {
+    transition-delay: 1s;
+    opacity: 1;
+    visibility: visible;
+}
+.repliedMessage_c19a55:has([src*="#{$devID}"]) { // Developer Badge in Replies (why do I have to do it this way 😭)
+    .replyAvatar_c19a55.replyAvatar_c19a55 {
+        padding-right: 0!important;
+        margin-left: 0px;
+    }
+    .username_c19a55 { 
+        padding-left: 15px;
+        &::after {
+            position: absolute;
+            content: $devBadge;
+            left: -2px;
+        }
+    }
+}
+.member__5d473:has(.avatar__44b0c[src*="#{$devID}"]) { // Developer Badge in Members List
+    .content__91a9d .nameAndDecorators__91a9d::before {
+        content: $devBadge;
+        margin-left: -2px;
+    }
+}
+.layer_da8173:has([data-member-id="#{$devID}"]) .usernameRow__63ed3::before,
+.panel_c0bea0[data-member-id="#{$devID}"] .usernameRow__63ed3::before,
+.fullSize_c0bea0[data-member-id="#{$devID}"] .usernameRow__63ed3::before { // Developer Badge in Profile Popouts, Full Profiles and DM side-profiles
+    content: $devBadge;
+    margin-right: -2px;
+}
+.dm__972a0:has(.avatar__44b0c[src*="#{$devID}"]) .content__20a53 .nameAndDecorators__20a53::before { // Developer Badge in DM list
+    content: $devBadge;
+    margin-left: -2px;
+}
