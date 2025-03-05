@@ -133,10 +133,37 @@
 }
 #app-mount
   [class^="messageListItem__"]:not(.isSystemMessage_c19a55) .container__122e4
-  .visualMediaItemContainer_f4758a {
+  .visualMediaItemContainer_f4758a, .codeContainer__75297 code {
     border-top-right-radius: 21px!important;
     border-top-left-radius: 21px!important;
+    border-radius: 21px!important;
 }
+
+#app-mount
+  [class^="messageListItem__"]:not(.isSystemMessage_c19a55) .container__122e4 {
+    .content__122e4 {
+      background-color: var(--bg-base-secondary) !important;
+      border: solid 3px var(--app-border-frame) !important;
+      border-top: 5px solid var(--brand-500)!important;
+      padding: 8px;
+      margin-top: 24px;
+      border-radius: 21px;
+    }
+    .headerContainer__122e4 {
+      position: absolute;
+      top: 10px;
+      .headerIcon__122e4, .headerText__122e4.headerText__122e4 {
+        color: var(--brand-500)!important;
+        text-transform: capitalize!important;
+        font-style: oblique!important;
+        path {fill: var(--brand-500)!important};
+      }
+    }
+    .quote__122e4 {
+      // background-color: var(--brand-experiment);
+      display: none;
+    }
+  }
 
 #app-mount
   [class^="messageListItem__"]
