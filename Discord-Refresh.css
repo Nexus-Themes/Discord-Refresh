@@ -105,14 +105,51 @@
 }
 
 #app-mount [class^=messageListItem__] [data-is-self=true]:not(.isSystemMessage_c19a55) .contents_c19a55 .messageContent_c19a55,
-#app-mount [class^=messageListItem__] [data-is-self=true]:not(.isSystemMessage_c19a55) .visualMediaItemContainer_f4758a,
+#app-mount [class^=messageListItem__] [data-is-self=true]:not(.isSystemMessage_c19a55, :has(.container__122e4)) .visualMediaItemContainer_f4758a,
 #app-mount [class^=messageListItem__] [data-is-self=true]:not(.isSystemMessage_c19a55) .embed__623de,
 #app-mount .message__5126c[data-author-self=true]:not(.isSystemMessage_c19a55) .contents_c19a55 .messageContent_c19a55,
 #app-mount .message__5126c[data-author-self=true]:not(.isSystemMessage_c19a55) .visualMediaItemContainer_f4758a,
-#app-mount .message__5126c[data-author-self=true]:not(.isSystemMessage_c19a55) .embed__623de {
+#app-mount .message__5126c[data-author-self=true]:not(.isSystemMessage_c19a55) .embed__623de,
+#app-mount [data-author-self=true] .content__122e4 {
   margin-left: auto;
-  border-top-right-radius: 0;
-  border-top-left-radius: 21px;
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 21px !important;
+}
+
+#app-mount [class^=messageListItem__]:not(.isSystemMessage_c19a55) .container__122e4 .visualMediaItemContainer_f4758a,
+[class^=messageListItem__] code, [class^=messageListItem__] code.inline {
+  border-top-right-radius: 21px !important;
+  border-top-left-radius: 21px !important;
+  border-radius: 21px !important;
+}
+
+#app-mount [class^=messageListItem__]:not(.isSystemMessage_c19a55) .container__122e4 .content__122e4 {
+  background-color: var(--bg-base-secondary) !important;
+  border: solid 3px var(--app-border-frame) !important;
+  border-top: 5px solid var(--brand-500) !important;
+  padding: 8px;
+  margin-top: 24px;
+  border-radius: 21px;
+}
+#app-mount [class^=messageListItem__]:not(.isSystemMessage_c19a55) .container__122e4 .headerContainer__122e4 {
+  position: absolute;
+  top: 10px;
+}
+#app-mount [class^=messageListItem__]:not(.isSystemMessage_c19a55) .container__122e4 .headerContainer__122e4 .headerIcon__122e4, #app-mount [class^=messageListItem__]:not(.isSystemMessage_c19a55) .container__122e4 .headerContainer__122e4 .headerText__122e4.headerText__122e4 {
+  color: var(--brand-500) !important;
+  text-transform: capitalize !important;
+  font-style: oblique !important;
+}
+#app-mount [class^=messageListItem__]:not(.isSystemMessage_c19a55) .container__122e4 .headerContainer__122e4 .headerIcon__122e4 path, #app-mount [class^=messageListItem__]:not(.isSystemMessage_c19a55) .container__122e4 .headerContainer__122e4 .headerText__122e4.headerText__122e4 path {
+  fill: var(--brand-500) !important;
+}
+#app-mount [class^=messageListItem__]:not(.isSystemMessage_c19a55) .container__122e4 .quote__122e4 {
+  display: none;
+}
+
+#app-mount [class^=messageListItem__] [data-is-self=true] .container__122e4 .container_b7e1cb {
+  margin-left: 0px !important;
+  margin-right: auto !important;
 }
 
 #app-mount [class^=messageListItem__] :not(.isSystemMessage_c19a55) .container_b7e1cb {
@@ -141,27 +178,35 @@
 .systemMessage__5126c {
   transition: all ease 0.5s;
   display: flex !important;
-  margin-bottom: -5px !important;
   justify-content: center !important;
-  /* Centers the list items */
+}
+.systemMessage__5126c:has(.welcomeCTA_f5d1e2) {
+  margin-bottom: 45px !important;
 }
 .systemMessage__5126c .iconContainer__235ca {
   display: none;
 }
 .systemMessage__5126c .timestamp_c19a55 {
   transition: all ease 0.5s;
-  /* opacity: 0; */
+  opacity: 0;
   font-size: 0;
 }
-.systemMessage__5126c .timestamp_c19a55:hover {
-  opacity: 1;
+.systemMessage__5126c .welcomeCTA_f5d1e2 {
+  transition: all ease 0.2s;
+  margin-top: 10px !important;
+  justify-self: center !important;
 }
 
 .systemMessage__5126c:hover {
   transition: all ease 0.5s;
 }
+.systemMessage__5126c:hover:has(.welcomeCTA_f5d1e2) {
+  margin-bottom: 25px;
+}
+.systemMessage__5126c:hover:has(.welcomeCTA_f5d1e2) .welcomeCTA_f5d1e2 {
+  margin-top: 15px !important;
+}
 .systemMessage__5126c:hover .timestamp_c19a55 {
-  /* transition: width ease 0.2s; */
   opacity: 1;
   font-size: small !important;
 }
@@ -183,6 +228,10 @@
 #app-mount .message__5126c[data-author-self=true] .avatarDecoration_c19a55 {
   left: unset;
   right: 4px;
+}
+
+#app-mount [class^=messageListItem__] [data-is-self=true] .avatarDecoration_c19a55 {
+  right: 0px;
 }
 
 #app-mount [class^=messageListItem__] [data-is-self=true] .header_c19a55,
@@ -234,13 +283,27 @@
 
 #app-mount .contents_c19a55 .messageContent_c19a55,
 #app-mount .visualMediaItemContainer_f4758a,
-#app-mount .embed__623de {
+#app-mount .embed__623de,
+#app-mount [data-is-self=false] .container__122e4 {
   background-color: var(--bg-base-secondary) !important;
   border: solid 1px var(--app-border-frame) !important;
   padding: 8px;
   margin-left: unset;
   border-radius: 21px;
   border-top-left-radius: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+
+#app-mount [data-is-self=true] .container__122e4 {
+  background-color: var(--bg-base-secondary) !important;
+  border: solid 1px var(--app-border-frame) !important;
+  padding: 8px;
+  margin-left: unset;
+  border-radius: 21px;
+  border-top-right-radius: 0;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content !important;
