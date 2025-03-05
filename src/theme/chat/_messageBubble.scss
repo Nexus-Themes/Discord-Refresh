@@ -110,7 +110,7 @@
   .messageContent_c19a55,
 #app-mount
   [class^="messageListItem__"]
-  [data-is-self="true"]:not(.isSystemMessage_c19a55)
+  [data-is-self="true"]:not(.isSystemMessage_c19a55,:has(.container__122e4))
   .visualMediaItemContainer_f4758a,
 #app-mount
   [class^="messageListItem__"]
@@ -125,12 +125,27 @@
   .visualMediaItemContainer_f4758a,
 #app-mount
   .message__5126c[data-author-self="true"]:not(.isSystemMessage_c19a55)
-  .embed__623de {
+  .embed__623de,
+#app-mount [data-author-self="true"] .content__122e4 {
   margin-left: auto;
-  border-top-right-radius: 0;
-  border-top-left-radius: 21px;
+  border-top-right-radius: 0!important;
+  border-top-left-radius: 21px!important;
+}
+#app-mount
+  [class^="messageListItem__"]:not(.isSystemMessage_c19a55) .container__122e4
+  .visualMediaItemContainer_f4758a {
+    border-top-right-radius: 21px!important;
+    border-top-left-radius: 21px!important;
 }
 
+#app-mount
+  [class^="messageListItem__"]
+  [data-is-self="true"] .container__122e4
+  .container_b7e1cb {
+    margin-left: 0px!important;
+    margin-right: auto!important;
+
+}
 #app-mount
   [class^="messageListItem__"]
   :not(.isSystemMessage_c19a55)
@@ -286,13 +301,24 @@
 
 #app-mount .contents_c19a55 .messageContent_c19a55,
 #app-mount .visualMediaItemContainer_f4758a,
-#app-mount .embed__623de {
+#app-mount .embed__623de,
+#app-mount [data-is-self="false"] .container__122e4 {
   background-color: var(--bg-base-secondary) !important;
   border: solid 1px var(--app-border-frame) !important;
   padding: 8px;
   margin-left: unset;
   border-radius: 21px;
   border-top-left-radius: 0;
+  width: fit-content;
+  height: fit-content !important;
+}
+#app-mount [data-is-self="true"] .container__122e4 {
+  background-color: var(--bg-base-secondary) !important;
+  border: solid 1px var(--app-border-frame) !important;
+  padding: 8px;
+  margin-left: unset;
+  border-radius: 21px;
+  border-top-right-radius: 0;
   width: fit-content;
   height: fit-content !important;
 }
