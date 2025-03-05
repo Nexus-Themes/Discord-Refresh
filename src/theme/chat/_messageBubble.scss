@@ -228,11 +228,12 @@
 
 .systemMessage__5126c:hover {
   transition: all ease 0.5s;
-  margin-bottom: 25px;
-  .welcomeCTA_f5d1e2 {
-    margin-top: 15px !important;
+  &:has(.welcomeCTA_f5d1e2) {
+    margin-bottom: 25px;
+    .welcomeCTA_f5d1e2 {
+      margin-top: 15px !important;
+    }
   }
-
   .timestamp_c19a55 {
     opacity: 1;
     font-size: small !important;
