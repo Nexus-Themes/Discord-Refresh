@@ -206,30 +206,34 @@
 .systemMessage__5126c {
   transition: all ease 0.5s;
   display: flex !important;
-  margin-bottom: -5px !important;
   justify-content: center !important;
-
-  /* Centers the list items */
+  &:has(.welcomeCTA_f5d1e2) {
+    margin-bottom: 45px !important;
+  }
   .iconContainer__235ca {
     display: none;
   }
 
   .timestamp_c19a55 {
     transition: all ease 0.5s;
-    /* opacity: 0; */
-    font-size: 0;
-
-    &:hover {
-      opacity: 1;
+      opacity: 0; 
+      font-size: 0;
     }
+  .welcomeCTA_f5d1e2 {
+    transition: all ease 0.2s;
+    margin-top: 10px !important;
+    justify-self: center !important;
   }
 }
 
 .systemMessage__5126c:hover {
   transition: all ease 0.5s;
+  margin-bottom: 25px;
+  .welcomeCTA_f5d1e2 {
+    margin-top: 15px !important;
+  }
 
   .timestamp_c19a55 {
-    /* transition: width ease 0.2s; */
     opacity: 1;
     font-size: small !important;
   }
