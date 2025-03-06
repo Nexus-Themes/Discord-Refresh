@@ -8,4 +8,5 @@
   - [ ] Restyle DM recepient profile.<br>
   - [ ] Add support for easy recoloring. <br> 
   - [ ] Refactor for lag.<br> 
+  - [ ] Fix Call UI
 </details> 
