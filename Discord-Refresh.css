@@ -110,7 +110,8 @@
 #app-mount .message__5126c[data-author-self=true]:not(.isSystemMessage_c19a55) .contents_c19a55 .messageContent_c19a55,
 #app-mount .message__5126c[data-author-self=true]:not(.isSystemMessage_c19a55) .visualMediaItemContainer_f4758a,
 #app-mount .message__5126c[data-author-self=true]:not(.isSystemMessage_c19a55) .embed__623de,
-#app-mount [data-author-self=true] .content__122e4 {
+#app-mount [data-author-self=true] .content__122e4,
+#app-mount [data-is-self=true] .nonVisualMediaItemContainer_f4758a {
   margin-left: auto;
   border-top-right-radius: 0 !important;
   border-top-left-radius: 21px !important;
@@ -284,7 +285,7 @@
 #app-mount .contents_c19a55 .messageContent_c19a55,
 #app-mount .visualMediaItemContainer_f4758a,
 #app-mount .embed__623de,
-#app-mount .spotify-embed-container,
+#app-mount .nonVisualMediaItemContainer_f4758a,
 #app-mount [data-is-self=false] .container__122e4 {
   background-color: var(--bg-base-secondary) !important;
   border: solid 1px var(--app-border-frame) !important;
@@ -298,18 +299,45 @@
   height: fit-content !important;
 }
 
-#app-mount [data-is-self=true] .container__122e4,
-#app-mount [data-is-self=true] .spotify-embed-container {
+#app-mount .message__5126c:not(.groupStart__5126c):has(.nonVisualMediaItemContainer_f4758a) .container_b7e1cb {
+  margin-top: -10px;
+  margin-bottom: -3px;
+}
+#app-mount .message__5126c:not(.groupStart__5126c):has(.nonVisualMediaItemContainer_f4758a) .container_b7e1cb .reactions__23977 {
+  margin-top: 5px;
+  margin-bottom: -6px;
+}
+
+#app-mount .message__5126c.groupStart__5126c:has(.nonVisualMediaItemContainer_f4758a) .container_b7e1cb {
+  margin-top: -5px;
+  margin-bottom: -3px;
+}
+#app-mount .message__5126c.groupStart__5126c:has(.nonVisualMediaItemContainer_f4758a) .container_b7e1cb .reactions__23977 {
+  margin-top: 5px;
+  margin-bottom: -6px;
+}
+
+#app-mount .container_b7e1cb:has(.spotify-embed-container) {
   background-color: var(--bg-base-secondary) !important;
   border: solid 1px var(--app-border-frame) !important;
   padding: 8px;
   margin-left: unset;
   border-radius: 21px;
-  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content !important;
-  height: fit-content !important;
+}
+#app-mount .container_b7e1cb:has(.spotify-embed-container):has(.reactions__23977) {
+  margin-bottom: 35px;
+}
+#app-mount .container_b7e1cb:has(.spotify-embed-container):has(.reactions__23977) .reactions__23977 {
+  margin-bottom: -43px;
+  translate: 0 10px;
+}
+
+#app-mount [data-is-self=true] .container_b7e1cb:has(.spotify-embed-container) {
+  border-radius: 21px;
+  border-top-right-radius: 0;
 }
 
 #app-mount .contents_c19a55 .messageContent_c19a55:has(.blockquoteContainer__75297) .blockquoteContainer__75297 {
