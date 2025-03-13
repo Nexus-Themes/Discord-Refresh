@@ -266,7 +266,8 @@
 #app-mount [class^=messageListItem__] [data-is-self=true] .repliedMessage_c19a55 .repliedTextContentTrailingIcon_c19a55,
 #app-mount [class^=messageListItem__] [data-is-self=true] .repliedMessage_c19a55 .repliedTextContentLeadingIcon_c19a55,
 #app-mount [class^=messageListItem__] [data-is-self=true] .repliedMessage_c19a55 .botTagCompact_c19a55,
-#app-mount [class^=messageListItem__] [data-is-self=true] .repliedMessage_c19a55 .hg-username-handle {
+#app-mount [class^=messageListItem__] [data-is-self=true] .repliedMessage_c19a55 .hg-username-handle,
+#app-mount [class^=messageListItem__] [data-is-self=true] .repliedMessage_c19a55 .indicatorContainer {
   rotate: 180deg;
   padding-right: 5px;
 }
