@@ -1,7 +1,9 @@
-#app-mount [class^="messageListItem__"] [data-is-self="true"],
-#app-mount .message__5126c[data-author-self="true"] {
-  margin-left: auto;
-  padding-right: 16px !important;
+#app-mount { 
+  [data-is-self="true"],
+  [data-author-self="true"] {
+    margin-left: auto;
+    padding-right: 16px !important;
+  }
 }
 
 .isSystemMessage_c19a55 {
@@ -11,122 +13,119 @@
   padding-right: unset !important;
 }
 
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .container_b7e1cb
-  :not(.container_b7e1cb *),
-#app-mount .message__5126c[data-author-self="true"] .container_b7e1cb {
-  direction: rtl;
-  text-align: right;
-  padding-right: 40px;
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    .container_b7e1cb
+    :not(.container_b7e1cb *),
+    .container_b7e1cb {
+      direction: rtl;
+      text-align: right;
+      padding-right: 0px;
+    }
+  }
+}
+
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    .groupStart__5126c:not(.markup__75297) {
+      text-align: right;
+      padding-right: 8px;
+    }
+  }
+}
+
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    .groupStart__5126c
+    > .contents_c19a55
+    > .markup__75297 {
+      text-align: left;
+    }
+  }
+}
+
+#app-mount {
+  [data-is-self="true"]:not(.systemMessage__5126c), [data-author-self="true"]:not(.systemMessage__5126c),
+  [data-is-self="true"].selected__5126c:not(.systemMessage__5126c), [data-author-self="true"].selected__5126c:not(.systemMessage__5126c) {
+    .contents_c19a55,
+    .container_b7e1cb:not(:empty),
+    .contents_c19a55 {
+      display: block;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: 35px !important;
+    }
+  }
+}
+
+#app-mount {
+  [data-is-self="true"].selected__5126c, [data-author-self="true"].selected__5126c {
+    .contents_c19a55 {
+      width: 100%;
+    }
+  }
+}
+
+#app-mount { 
+  [data-is-self="true"], [data-author-self="true"] {
+    .timestamp_c19a55 {
+      left: unset;
+      right: 8px;
+      margin-top: 1.75px;
+    }
+  }
+}
+
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    .replying__5126c .contents_c19a55 .messageContent_c19a55::before,
+    .mentioned__5126c .contents_c19a55 .messageContent_c19a55::before  {
+      left: unset;
+      right: 0;
+    }
+  }
 }
 
 #app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .groupStart__5126c:not(.markup__75297),
-#app-mount
-  .message__5126c[data-author-self="true"]
-  .groupStart__5126c:not(.markup__75297) {
-  text-align: right;
-  padding-right: 8px;
-}
-
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .groupStart__5126c
-  > .contents_c19a55
-  > .markup__75297,
-#app-mount
-  .message__5126c[data-author-self="true"]
-  .groupStart__5126c
-  > .contents_c19a55
-  > .markup__75297 {
-  text-align: left;
-}
-
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]:not(.systemMessage__5126c)
-  .contents_c19a55,
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]:not(.systemMessage__5126c)
-  .container_b7e1cb:not(:empty),
-#app-mount .message__5126c[data-author-self="true"] .contents_c19a55 {
-  display: block;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: 45px !important;
-}
-
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"].message__5126c.selected__5126c
-  .contents_c19a55,
-#app-mount
-  .message__5126c.selected__5126c[data-author-self="true"]
-  .contents_c19a55 {
-  width: 100%;
-}
-
-#app-mount [class^="messageListItem__"] [data-is-self="true"] .timestamp_c19a55,
-#app-mount .message__5126c[data-author-self="true"] .timestamp_c19a55 {
-  left: unset;
-  right: 8px;
-  margin-top: 1.75px;
-}
-
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .replying__5126c
-  .contents_c19a55
-  .messageContent_c19a55::before,
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .mentioned__5126c
-  .contents_c19a55
-  .messageContent_c19a55::before,
-#app-mount
-  .replying__5126c[data-author-self="true"]
-  .contents_c19a55
-  .messageContent_c19a55::before,
-#app-mount
-  .mentioned__5126c[data-author-self="true"]
-  .contents_c19a55
-  .messageContent_c19a55::before {
-  left: unset;
-  right: 0;
-}
-
-#app-mount
-  [class^="messageListItem__"]
   [data-is-self="true"]:not(.isSystemMessage_c19a55)
   .contents_c19a55
   .messageContent_c19a55,
+#app-mount [data-author-self="true"]:not(.isSystemMessage_c19a55)
+.contents_c19a55
+.messageContent_c19a55,
 #app-mount
-  [class^="messageListItem__"]
   [data-is-self="true"]:not(.isSystemMessage_c19a55,:has(.container__122e4))
   .visualMediaItemContainer_f4758a,
 #app-mount
-  [class^="messageListItem__"]
+  [data-author-self="true"]:not(.isSystemMessage_c19a55,:has(.container__122e4))
+  .visualMediaItemContainer_f4758a,
+#app-mount
   [data-is-self="true"]:not(.isSystemMessage_c19a55)
   .embed__623de,
 #app-mount
-  .message__5126c[data-author-self="true"]:not(.isSystemMessage_c19a55)
-  .contents_c19a55
-  .messageContent_c19a55,
+  [data-author-self="true"]:not(.isSystemMessage_c19a55)
+  .embed__623de,
+#app-mount
+  [data-author-self="true"]:not(.isSystemMessage_c19a55)
+  .contents_c19a55 .messageContent_c19a55,
+#app-mount
+  [data-is-self="true"]:not(.isSystemMessage_c19a55)
+  .contents_c19a55 .messageContent_c19a55,
 #app-mount
   .message__5126c[data-author-self="true"]:not(.isSystemMessage_c19a55)
   .visualMediaItemContainer_f4758a,
 #app-mount
+  .message__5126c[data-is-self="true"]:not(.isSystemMessage_c19a55)
+  .visualMediaItemContainer_f4758a,
+#app-mount
   .message__5126c[data-author-self="true"]:not(.isSystemMessage_c19a55)
   .embed__623de,
+#app-mount
+  .message__5126c[data-is-self="true"]:not(.isSystemMessage_c19a55)
+  .embed__623de,
 #app-mount [data-author-self="true"] .content__122e4,
+#app-mount [data-is-self="true"] .content__122e4,
+#app-mount [data-author-self="true"] .nonVisualMediaItemContainer_f4758a,
 #app-mount [data-is-self="true"] .nonVisualMediaItemContainer_f4758a {
   margin-left: auto;
   border-top-right-radius: 0!important;
@@ -166,14 +165,15 @@
     }
   }
 
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"] .container__122e4
-  .container_b7e1cb {
-    margin-left: 0px!important;
-    margin-right: auto!important;
-
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    .container__122e4 .container_b7e1cb {
+      margin-left: 0px!important;
+      margin-right: auto!important;
+    }
+  }
 }
+
 #app-mount
   [class^="messageListItem__"]
   :not(.isSystemMessage_c19a55)
@@ -241,91 +241,83 @@
   }
 }
 
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  a:not(.embed__623de .embedAuthorNameLink__623de),
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .repliedMessage_c19a55
-  #app-mount
-  .message__5126c[data-author-self="true"]
-  a:not(.embed__623de .embedAuthorNameLink__623de),
-#app-mount .message__5126c[data-author-self="true"] .repliedMessage_c19a55 {
-  margin-left: auto;
-}
-
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .embedAuthor__623de,
-#app-mount .message__5126c[data-author-self="true"] .embedAuthor__623de {
-  direction: ltr;
-}
-
-#app-mount [class^="messageListItem__"] [data-is-self="true"] .avatar_c19a55,
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .avatarDecoration_c19a55,
-#app-mount .message__5126c[data-author-self="true"] .avatar_c19a55,
-#app-mount .message__5126c[data-author-self="true"] .avatarDecoration_c19a55 {
-  left: unset;
-  right: 4px;
-}
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .avatarDecoration_c19a55 {
-    right: 0px;
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    a:not(.embed__623de .embedAuthorNameLink__623de),
+    .repliedMessage_c19a55,
+    a:not(.embed__623de .embedAuthorNameLink__623de),
+    .repliedMessage_c19a55 {
+      margin-left: auto;
+    }
   }
-
-#app-mount [class^="messageListItem__"] [data-is-self="true"] .header_c19a55,
-#app-mount .message__5126c[data-author-self="true"] .header_c19a55 {
-  display: flex;
-  flex-direction: row-reverse;
 }
 
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .header_c19a55
-  span,
-#app-mount .message__5126c[data-author-self="true"] .header_c19a55 span {
-  margin-left: 0.25rem;
-  margin-right: unset;
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    .embedAuthor__623de, .embedAuthor__623de {
+      direction: ltr;
+    }
+  }
 }
 
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .repliedMessage_c19a55 {
-  margin-left: auto;
-  margin-right: 45px;
-  rotate: 180deg;
-  flex-direction: row-reverse;
-
-  .repliedMessageClickableSpine_c19a55 {
-    transform: scaleY(-1);
-    translate: 15px -15px;
-    margin-left: -15px;
-    margin-right: 15px;
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    .avatar_c19a55 {
+      left: unset;
+      right: 4px;
+    }
   }
+}
 
-  .repliedTextPreview_c19a55,
-  .chipletContainerInner__4a25c,
-  .username_c19a55,
-  .replyAvatar_c19a55,
-  .repliedTextContentTrailingIcon_c19a55,
-  .repliedTextContentLeadingIcon_c19a55,
-  .botTagCompact_c19a55,
-  .hg-username-handle,
-  .indicatorContainer {
-    rotate: 180deg;
-    padding-right: 5px;
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    .avatarDecoration_c19a55 {
+      left: unset;
+      right: 0px;
+    }
   }
+}
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] { 
+    .header_c19a55 {
+      display: inline-flex;
+      flex-direction: row-reverse;
+      justify-self: right;
+      overflow: hidden;
+    }
+  }
+}
 
+
+
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    .repliedMessage_c19a55 {
+      margin-left: auto;
+      margin-right: 35px;
+      rotate: 180deg;
+      flex-direction: row-reverse;
+      .repliedMessageClickableSpine_c19a55 {
+        transform: scaleY(-1);
+        translate: 15px -15px;
+        margin-left: -15px;
+        margin-right: 15px;
+        }  
+      .repliedTextPreview_c19a55,
+      .chipletContainerInner__4a25c,
+      .username_c19a55,
+      .replyAvatar_c19a55,
+      .repliedTextContentTrailingIcon_c19a55,
+      .repliedTextContentLeadingIcon_c19a55,
+      .botTagCompact_c19a55,
+      .hg-username-handle,
+      .indicatorContainer,
+      .vc-reply-timestamp {
+        rotate: 180deg;
+        padding-right: 5px;
+      }
+    }
+  }
   .hg-username-handle.hg-username-handle {
     padding-right: 0;
   }
@@ -339,19 +331,21 @@
   max-width: 100%;
 }
 
-#app-mount .contents_c19a55 .messageContent_c19a55,
-#app-mount .visualMediaItemContainer_f4758a,
-#app-mount .embed__623de,
-#app-mount .nonVisualMediaItemContainer_f4758a,
-#app-mount [data-is-self="false"] .container__122e4 {
-  background-color: var(--bg-base-secondary) !important;
-  border: solid 1px var(--app-border-frame) !important;
-  padding: 8px;
-  margin-left: unset;
-  border-radius: 21px;
-  border-top-left-radius: 0;
-  width: fit-content;
-  height: fit-content !important;
+#app-mount {
+  .contents_c19a55 .messageContent_c19a55,
+  .visualMediaItemContainer_f4758a,
+  .embed__623de,
+  .nonVisualMediaItemContainer_f4758a,
+  [data-is-self="false"] .container__122e4, [data-author-self="false"] .container__122e4 {
+    background-color: var(--bg-base-secondary) !important;
+    border: solid 1px var(--app-border-frame) !important;
+    padding: 8px;
+    margin-left: unset;
+    border-radius: 21px;
+    border-top-left-radius: 0;
+    width: fit-content;
+    height: fit-content !important;
+  }
 }
 
 #app-mount .message__5126c:not(.groupStart__5126c):has(.nonVisualMediaItemContainer_f4758a) .container_b7e1cb {
@@ -421,17 +415,6 @@
   background-color: var(--background-secondary-alt);
 }
 
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .compact_c19a55.wrapper_c19a55
-  .messageContent_c19a55
-  #app-mount
-  .message__5126c.compact_c19a55.wrapper_c19a55[data-author-self="true"]
-  .messageContent_c19a55 {
-  display: flex;
-}
-
 #app-mount .compact_c19a55.wrapper_c19a55 {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -441,7 +424,7 @@
   .mentioned__5126c.compact_c19a55
   .contents_c19a55
   .messageContent_c19a55::before:not(
-    [class^="messageListItem__"] [data-is-self="true"]
+    [data-is-self="true"] 
   ),
 #app-mount
   .replying__5126c.compact_c19a55
@@ -469,7 +452,7 @@
   .mentioned__5126c.selected__5126c
   .contents_c19a55
   .messageContent_c19a55 {
-  background-color: var(--background-mentioned-hover);
+    background-color: var(--background-mentioned-hover);
 }
 
 #app-mount .mentioned__5126c .contents_c19a55 .messageContent_c19a55::before {
@@ -523,17 +506,15 @@
   z-index: 1;
 }
 
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .repliedMessage_c19a55:before,
-#app-mount
-  .message__5126c[data-author-self="true"]
-  .repliedMessage_c19a55:before,
-#app-mount .mentioned__5126c:before,
-.replying__5126c:before,
-.repliedMessage_c19a55:before,
-.spine__9271d.cozy__9271d,
-.message__5126c::after {
-  display: none;
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    .repliedMessage_c19a55:before,
+    .mentioned__5126c:before,
+    .replying__5126c:before,
+    .repliedMessage_c19a55:before,
+    .spine__9271d.cozy__9271d,
+    .message__5126c::after {
+      display: none;
+    }
+  }
 }

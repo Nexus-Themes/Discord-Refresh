@@ -5,15 +5,16 @@
   ) !important;
 }
 /* Move popover to left for messages sent by yourself */
-#app-mount
-  [class^="messageListItem__"]
-  [data-is-self="true"]
-  .buttonContainer_c19a55 {
-  position: absolute;
-  rotate: 180deg;
-  left: 20px;
+#app-mount {
+  [data-is-self="true"], [data-author-self="true"] {
+    .buttonContainer_c19a55 {
+     position: absolute;
+      rotate: 180deg;
+      left: 20px;
 
-  .buttonsInner__5126c {
-    rotate: 180deg;
+      .buttonsInner__5126c {
+        rotate: 180deg;
+      }
+    }
   }
 }
